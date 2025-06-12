@@ -10,7 +10,7 @@ class ListviewScreen2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Listview2', style: TextStyle(color: Colors.white)),
+        title: Text('Listview2'),
         centerTitle: true,
       ),
       body: ListView.separated(
@@ -26,6 +26,10 @@ class ListviewScreen2 extends StatelessWidget {
             },
           );
         },
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){},
+        child: Icon(Icons.home),
       ),
     );
   }
