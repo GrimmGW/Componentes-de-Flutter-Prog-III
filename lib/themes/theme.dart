@@ -18,7 +18,21 @@ class AppTheme {
     floatingActionButtonTheme: FloatingActionButtonThemeData(
       backgroundColor: primary,
       foregroundColor: primaryClear,
-    )
+    ),
+
+    //Tema para botones
+    filledButtonTheme: FilledButtonThemeData(
+      style: ButtonStyle(
+        backgroundColor: WidgetStateProperty.all(primary),
+        foregroundColor: WidgetStateProperty.all(primaryClear)
+      )
+    ),
+
+    textButtonTheme: TextButtonThemeData(
+      style: ButtonStyle(
+        foregroundColor: WidgetStateProperty.all(primary),
+      )
+    ),
   );
 
   static final ThemeData darkTheme = ThemeData.dark().copyWith(
