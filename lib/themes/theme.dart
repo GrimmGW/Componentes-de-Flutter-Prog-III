@@ -33,6 +33,26 @@ class AppTheme {
         foregroundColor: WidgetStateProperty.all(primary),
       )
     ),
+
+    //Tema para inputs
+    inputDecorationTheme: InputDecorationTheme(
+      
+      floatingLabelStyle: TextStyle( color: primary ),
+
+      focusedBorder: OutlineInputBorder(
+        borderSide: BorderSide(
+          color: primary!,
+          width: 3
+        )
+      ),
+
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.only(
+          bottomLeft: Radius.circular(10),
+          topRight: Radius.circular(10)
+        )
+      )
+    )
   );
 
   static final ThemeData darkTheme = ThemeData.dark().copyWith(

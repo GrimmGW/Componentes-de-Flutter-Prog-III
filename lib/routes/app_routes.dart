@@ -12,15 +12,19 @@ class AppRoutes {
     MenuOptions(route: 'listview1', icon: Icons.list_alt_rounded, name: 'Listview1 Screen', screen: const ListviewScreen()),
     MenuOptions(route: 'listview2', icon: Icons.list_alt_rounded, name: 'Listview2 Screen', screen: const ListviewScreen2()),
     MenuOptions(route: 'container', icon: Icons.gif_box_rounded, name: 'Container Screen', screen: const ContainerScreen()),
-    MenuOptions(route: 'dependencies', icon: Icons.temple_hindu_sharp, name: 'Dependencies Screen', screen: const DependenciesScreen())
+    MenuOptions(route: 'dependencies', icon: Icons.temple_hindu_sharp, name: 'Dependencies Screen', screen: const DependenciesScreen()),
+    MenuOptions(route: 'avatar', icon: Icons.person_2_rounded, name: 'Avatar Screen', screen: const AvatarScreen()),
+    MenuOptions(route: 'inputs', icon: Icons.input_rounded, name: 'Inputs Screen', screen: const InputsScreen())
   ];
 
   static Map<String, Widget Function(BuildContext)> routes = {
-    'alert'     : (BuildContext context) => const AlertScreen(),
-    'card'      : (BuildContext context) => const CardScreen(),
-    'listview1' : (BuildContext context) => const ListviewScreen(),
-    'listview2' : (BuildContext context) => const ListviewScreen2(),
-    'container' : (BuildContext context) => const ContainerScreen(),
+    'alert'        : (BuildContext context) => const AlertScreen(),
+    'card'         : (BuildContext context) => const CardScreen(),
+    'listview1'    : (BuildContext context) => const ListviewScreen(),
+    'listview2'    : (BuildContext context) => const ListviewScreen2(),
+    'container'    : (BuildContext context) => const ContainerScreen(),
     'dependencies' : (BuildContext context) => const DependenciesScreen(),
+    'avatar'       : (BuildContext context) => const AvatarScreen(),
+    'inputs'       : (BuildContext context) => const InputsScreen(),
   };
 }
