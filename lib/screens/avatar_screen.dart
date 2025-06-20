@@ -13,14 +13,14 @@ class AvatarScreen extends StatelessWidget {
           Container(
             margin: EdgeInsets.only(right: 15),
             child: CircleAvatar(
-              backgroundImage: NetworkImage('https://static.tvtropes.org/pmwiki/pub/images/thecathodehimself.png'),
+              child: Text('HL'),
             ),
           )
         ],
       ),
       body: Center(
          child: CircleAvatar(
-          backgroundImage: NetworkImage('https://static.tvtropes.org/pmwiki/pub/images/thecathodehimself.png'),
+          backgroundImage: NetworkImage('https://i.imgur.com/3yKHuRy.png'),
           radius: 50,
          )
       ),
