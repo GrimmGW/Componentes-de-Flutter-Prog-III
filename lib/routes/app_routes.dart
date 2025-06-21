@@ -14,7 +14,8 @@ class AppRoutes {
     MenuOptions(route: 'container', icon: Icons.gif_box_rounded, name: 'Container Screen', screen: const ContainerScreen()),
     MenuOptions(route: 'dependencies', icon: Icons.temple_hindu_sharp, name: 'Dependencies Screen', screen: const DependenciesScreen()),
     MenuOptions(route: 'avatar', icon: Icons.person_2_rounded, name: 'Avatar Screen', screen: const AvatarScreen()),
-    MenuOptions(route: 'inputs', icon: Icons.input_rounded, name: 'Inputs Screen', screen: const InputsScreen())
+    MenuOptions(route: 'inputs', icon: Icons.input_rounded, name: 'Inputs Screen', screen: const InputsScreen()),
+    MenuOptions(route: 'slider', icon: Icons.social_distance_rounded, name: 'Slider y Checks', screen: const SliderScreen()),
   ];
 
   static Map<String, Widget Function(BuildContext)> routes = {
@@ -26,5 +27,6 @@ class AppRoutes {
     'dependencies' : (BuildContext context) => const DependenciesScreen(),
     'avatar'       : (BuildContext context) => const AvatarScreen(),
     'inputs'       : (BuildContext context) => const InputsScreen(),
+    'slider'       : (BuildContext context) => const SliderScreen(),
   };
 }

@@ -28,11 +28,43 @@ class InputsScreen extends StatelessWidget {
                   obscureTextValue: false,
                 ),
                 CustomInput(
+                  hintTextValue: 'Ingresa tu email', 
+                  labelTextValue: 'Email', 
+                  keyboardTypeValue: TextInputType.emailAddress, 
+                  obscureTextValue: false
+                ),
+                CustomInput(
                   hintTextValue: 'Ingresa tu contraseña',
                   labelTextValue: 'Contraseña',
                   keyboardTypeValue: TextInputType.text,
                   obscureTextValue: true,
+                  icon: Icons.remove_red_eye_rounded,
                 ),
+
+                DropdownButtonFormField(
+                  items: [
+                    DropdownMenuItem(
+                      child: Text('Usuario'),
+                      value: 'user',
+                    ),
+                    DropdownMenuItem(
+                      child: Text('Administrador'),
+                      value: 'admin',
+                    ),
+                  ], 
+                  onChanged: ( value ){
+
+                  }
+                ),
+                SizedBox(height: 20),
+                ElevatedButton(
+                  onPressed: (){},
+                  child: Padding(
+                    padding: EdgeInsetsGeometry.symmetric(horizontal: 30, vertical: 20),
+                    child: Text('Guardar'),
+                  )
+                )
+
               ],
             ),
           ),

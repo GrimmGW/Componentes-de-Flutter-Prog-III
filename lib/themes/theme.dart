@@ -34,6 +34,13 @@ class AppTheme {
       )
     ),
 
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ButtonStyle(
+        backgroundColor: WidgetStateProperty.all(AppTheme.primary),
+        foregroundColor: WidgetStateProperty.all(AppTheme.primaryClear),
+      ),
+    ),
+
     //Tema para inputs
     inputDecorationTheme: InputDecorationTheme(
       

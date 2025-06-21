@@ -6,6 +6,7 @@ class CustomInput extends StatelessWidget {
   final String labelTextValue;
   final TextInputType keyboardTypeValue;
   final bool obscureTextValue;
+  final IconData? icon;
 
 
   const CustomInput({
@@ -14,6 +15,7 @@ class CustomInput extends StatelessWidget {
     required this.labelTextValue, 
     required this.keyboardTypeValue, 
     required this.obscureTextValue,
+    this.icon
   });
 
   @override
@@ -29,6 +31,10 @@ class CustomInput extends StatelessWidget {
         onChanged: (value) {
           print('Valor actual: $value');
         },
+        validator: ( value ){
+          if ( value == null ) return 'Este campo es requerido';
+          return value.length < 3 ? 'Minimo 3 caracteres' : null;
+        },
         autovalidateMode: AutovalidateMode.onUserInteraction,
         decoration: InputDecoration(
           hintText: hintTextValue,
@@ -37,10 +43,11 @@ class CustomInput extends StatelessWidget {
           // prefixIcon: Icon(Icons.person),
           // icon: Icon(Icons.person),
           
-          // suffixIcon: IconButton(
-          //   onPressed: (){}, 
-          //   icon: Icon(Icons.remove_red_eye)
-          // ),
+          suffixIcon: icon != null ?
+           IconButton(
+            onPressed: (){}, 
+            icon: Icon(Icons.remove_red_eye)
+          ) : null,
         ),
       ),
     );
